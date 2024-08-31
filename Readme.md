@@ -67,7 +67,7 @@ Use it at the beginning of a line to get back where you have left in the last li
 
 #### Download Executable
 
-At First download the executable of the interpreter from the **releases** section of this repo.
+At First download the executable of the interpreter from the [**releases**](https://github.com/dshaw0004/headache/releases/) section of this repo.
 Then you can few different approachs
 
     1. create a separate folder for headache files and move the interpreter to that folder. Then use can just to `./headache helloworld.headache`. But in this way you can not use the interpreter globally so easily.
