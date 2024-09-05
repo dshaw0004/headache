@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headache Programming Language</title>
+</head>
+<body>       
+    <h1>Headache programming</h1>
+    <p>After getting inspired from <strong>Brainfuck</strong> I have made a similar programming language <strong>Headache</strong> but simplier than <strong>Brainfuck</strong></p>
+
+    <h2>Why Headache ?</h2>
+    <p>Certainly, this is not going to fuck your brain like <strong>Brainfuck</strong> but it might give you headache.</p>
+
+    <h2>What is Headache ?</h2>
+    <p>
+        <strong>Headache</strong> is a useless programming language made as a joke which can not do anything more than printing some text in terminal.
+        Inspired from <strong>Brainfuck</strong> it also use symbols only to do stuffs.
+    </p>
+
+    <h2>Advantages of Headache</h2>
+    <ul>
+        <li>Good for wasting time</li>
+    </ul>
+    
+
+    <h2>Disadvantages of Headache</h2>
+    <ul>
+        <li>This is useless</li>
+        <li>It can only print characters in the terminal, nothing more than that.</li>
+    </ul>
+ 
+
+    <h2>Getting Started with Headache</h2>
+    <p>
+        Firstly, create a file with <code class="inline-code">.headache</code> extension.
+        Now we will write some <em>headache</em> code.
+        But before that let's learn how it work.
+    </p>
+
+    <h3>How to write headache code</h3>
+    <p>
+        Each line act as a separate block of code.
+        At the beginning of each line a counter initiate at 65 which is the ASCII value of <strong>'A'</strong>. So if we just write <code class="inline-code">></code> and does not do anything it will print <strong>A</strong> in the terminal.
+        Now you have to increament or decreament the counter to reach the ASCII code of your desired symbol.
+        And to increament or decreament the counter use <strong><code class="inline-code">+</code> or <code class="inline-code">-</code></strong> symbols respectively.
+        For example, if you want to print <strong>'D'</strong> you have to do this <code class="inline-code">+++></code>
+    </p>
+
+    <!-- > Remember one important thing, counter will initiate at 65 at the beginning of line so <code class="inline-code">+</code> is 66 and <code class="inline-code">+++++++++++</code> is 76, i.e. 'B' and 'L' respectively. -->
+
+    <p>Now to print a new line use <strong><code class="inline-code">\</code></strong>. It will print new line (\n) only.</p>
+
+    <p>
+        It is not necessary that you will only output in capital letters, you might want small letters.
+        You can get small letters by increamenting the counter to 97 first then increamenting it according to your need.
+        Or you can use <strong><code class="inline-code">@</code></strong>, it will move your counter to 97.
+        Then just increament or decreament the counter usually.
+    </p>
+
+    <p>Similar to <code class="inline-code">@</code> <strong><code class="inline-code">^</code></strong> will move the counter to 48. 48 is the ASCII code for the number zero (0). </p>
+
+    <p>In case you need to reset the counter back to 65 in the middle of a line then use <strong><code class="inline-code">!</code></strong>.</p>
+
+    <p>Finally for commenting use <strong><code class="inline-code">#</code></strong>. But as for v0.1.0 it only support single line comment. Also commenting after some code in the same line is not support.</p>
+
+    <pre>
+        <code class="block-code">
+            # this is a comment which is supported
+            +++> 
+
+            +++> # this type of comment is not supported yet.
+        </code>
+    </pre>
+
+    <p>
+        Finally <strong><code class="inline-code">.</code></strong> ( fullstop or period symbol ) stores the counter value of last line.
+        Use it at the beginning of a line to get back where you have left in the last line.
+    </p>
+
+    <h2>How to run a .headache file</h2>
+
+    <h3>For linux</h3>
+
+    <h4>Download Executable</h4>
+
+    <p>
+        At First download the executable of the interpreter from the <a href="https://github.com/dshaw0004/headache/releases/"><strong>releases</strong></a> section of this repo.
+        Then you can few different approachs
+    </p>
+
+    <ol>
+        <li>create a separate folder for headache files and move the interpreter to that folder. Then use can just to <code class="inline-code">./headache helloworld.headache</code>. But in this way you can not use the interpreter globally so easily.</li>
+        <li>Follow the 1st option but add an _alias_ of the path of the interpreter in your <strong>.bashrc</strong> or equivalent file.
+            <code class="inline-code">alias headache=/path/to/headache/interpreter</code></li>
+        <li>Download the executable then move it to <code class="inline-code">/bin/</code> directory to access it from every where. You can use <code class="inline-code">sudo mv headache /bin/</code> to move the file to <code class="inline-code">/bin</code> directory.</li>
+    </ol>
+  
+
+    <p>Finally you can just run the headache file by doing <code class="inline-code">headache filename.headache</code> in your terminal.</p>
+
+    <h4>Build or Run from scratch</h4>
+
+    <p>
+        The interpreter of headache is made using python and its a single python file. So you can copy the <code class="inline-code">headache.py</code> file the repo and
+        run that python file with an argument of your headache file path. e.g., <code class="inline-code">python3 headache.py path/to/file.headache</code>.
+    </p>
+
+    <p>Or </p>
+
+    <p>You can just build a binary executable using <strong>pyinstaller</strong> or any other similar library.</p>
+
+    <h2>For Windows</h2>
+
+    <p>
+        There is no executable for Windows you have to run it from the python file.
+        <code class="inline-code">python headache.py path/to/file.headache</code>
+    </p>
+
+    <h2>Cheatsheet</h2>
+    <ul>
+    <li>At the beginning of each line a Counter will start at 65 ( A )</li>
+
+    <li><code class="inline-code">></code> will Output the symbol for the ASCII code of current number</li>
+
+    <li><code class="inline-code">\</code> will print a new line character ('\n')</li>
+
+    <li><code class="inline-code">+</code> will increase the counter by one</li>
+
+    <li><code class="inline-code">-</code> will decrease the counter by one</li>
+
+    <li><code class="inline-code">@</code> will move counter to 97 (a)</li>
+
+    <li><code class="inline-code">!</code> will reset back the counter to 65 ( A )</li>
+
+    <li><code class="inline-code">^</code> will take the counter to 48 ( number zero )</li>
+
+    <li><code class="inline-code">#</code> will comment out the line</li>
+
+    <li>If the line starts with <code class="inline-code">.</code> Then it will continue the counter from last line.</li>
+</ul>
+
+    <h2>Example</h2>
+    <p>Hello World program in Headache.</p>
+
+    <pre>
+        <code class="block-code">
+            # Clean, easy to read one character at a line.
+
+            # H
+            +++++++>
+            # e
+            @++++>
+            # l
+            .+++++++> 
+            # l
+            .>
+            # o
+            .+++> 
+            # <space>
+            ^----------------> 
+            # W
+            @----------> 
+            # o
+            @++++++++++++++>
+            # r
+            .+++> 
+            # l
+            .------> 
+            # d
+            @+++> 
+            # !
+            ^---------------> 
+            </code>
+        </pre>
+        <p>or you can do this.</p>
+    <pre>
+        <code class="block-code">
+            # everything in one line. Messy code.
+            +++++++>@++++>+++++++>>+++>^---------------->@---------->@++++++++++++++>+++>------>@+++>^---------------> 
+        </code>
+    </pre>
+
+    <h2>End Note</h2>
+
+    <p>
+        At the end I would like to its a joke. I have made it as a joke. Don't waste your time in this kind of shit.
+        <strong>And that's it for version 0.1.0 of headache.</strong>
+    </p>
+</body>
+</html>
