@@ -48,8 +48,7 @@ Similar to `@` **`^`** will move the counter to 48. 48 is the ASCII code for the
 
 In case you need to reset the counter back to 65 in the middle of a line then use **`!`**.
 
-Finally for commenting use **`#`**. But as for v0.1.0 it only support single line comment.
-Also commenting after some code in the same line is not support.
+Finally for commenting use **`#`**. Everything after the **`#`** will be considered as comment thus ignored.
 
 ```
 # this is a comment which is supported
