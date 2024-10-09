@@ -51,10 +51,10 @@ In case you need to reset the counter back to 65 in the middle of a line then us
 Finally for commenting use **`#`**. Everything after the **`#`** will be considered as comment thus ignored.
 
 ```
-# full line commit
+# Full line comment
 +++> 
 
-+++> # inline commit
++++> # inline comment
 ```
 
 Finally **`.`** ( fullstop or period symbol ) stores the counter value of last line.
