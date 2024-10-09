@@ -1,0 +1,14 @@
+# This file will print *Python* when run
+# Also this file contains inline comments as it is created when inline comment 
+# support is added to Headache
+
+\\ # add newline at the start
++++++++++++++++> # this prints P 
+@++++++++++++++++++++++++> # this prints y
+.-----> # this prints t
+@+++++++> # this prints h 
+.+++++++> # this prints o
+.-> # this prints n
+\\ # add newline at the end
+
+

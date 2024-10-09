@@ -15,7 +15,7 @@ with open(filename, 'r') as file:
     prev_counter = 65
     for line in file:
         counter = 65
-        if '#' == line[0]:
+        if line.startswith('#'):
             continue
         for character in line:
             if '\n' == character:
@@ -36,6 +36,8 @@ with open(filename, 'r') as file:
                 counter = 48
             elif '.' == character:
                 counter = prev_counter
+            elif '#' == character:
+                break
 
         prev_counter = counter
 
